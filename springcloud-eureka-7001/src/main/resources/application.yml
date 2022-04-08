@@ -1,8 +1,8 @@
 server:
   port: 7001
-  servlet:
-    context-path: /eureka
-# 访问监控页面地址 http://localhost:7001/eureka/
+#  servlet:
+#    context-path: /eureka
+# 访问监控页面地址 http://localhost:7001
 
 
 

@@ -9,11 +9,25 @@ mybatis:
 
 #spring的配置
 spring:
-#  application:
-#    name: springcloud-provider-dept  # 3个服务名称一致是前提
+  application:
+    name: springcloud-provider-dept  # 3个服务名称一致是前提
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource  #数据源
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://127.0.0.1:3306/springcloud_test?useUnicode=true&characterEncoding=UTF-8&useSSL=true&serverTimezone=UTC
     username: root
     password: Codvision@2020
+
+#eureka 的配置，服务注册到哪里
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka/
+  instance:
+    instance-id: springcloud-provider-dept8001  #修改Eureka上的默认的状态名字
+
+#info配置（点击状态信息会返回的东西，可以百度）
+info:
+  app.name: xin-springcloud
+  company.name: blog.csdn.net/kongsanjin
+
