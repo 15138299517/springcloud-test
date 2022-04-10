@@ -1,5 +1,5 @@
 server:
-  port: 7001
+  port: 7002
 #  servlet:
 #    context-path: /eureka
 # 访问监控页面地址 http://localhost:7001
@@ -10,12 +10,11 @@ server:
 #Eureka配置
 eureka:
   instance:
-#    hostname: localhost # Eureka服务端实例的名字
-    hostname: eureka7001.com # Eureka服务端实例的名字
+    hostname: eureka7002.com # Eureka服务端实例的名字
   client:
     register-with-eureka: false  # 表示是否将自己注册到Eureka Server
     fetch-registry: false # 表示是否从Eureka Server获取注册的服务信息 默认为true
     service-url: # 监控页面地址
       # 单机模式下配置自己一个就够了：defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
-      # 集群（关联）: 我们需要在7001里面去挂载7002和7003
-      defaultZone: http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
+      # 集群（关联）: 我们需要在7001里面去挂载7001和7003
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7003.com:7003/eureka/
