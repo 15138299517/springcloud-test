@@ -22,6 +22,20 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+
+        <!--Ribbon-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-ribbon</artifactId>
+            <version>1.4.7.RELEASE</version>
+        </dependency>
+        <!--导入Ribbon的同时要导入erueka，因为它要发现服务从那里来-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-eureka</artifactId>
+            <version>1.4.7.RELEASE</version>
+        </dependency>
+
     </dependencies>
 
 

@@ -23,7 +23,9 @@ public class DeptConsumerController {
     @Resource
     private RestTemplate restTemplate;
 
-    private static final String REST_URL_PREFIX = "http://localhost:8001";
+    //private static final String REST_URL_PREFIX = "http://localhost:8001";
+    //用Ribbon做负载均衡的时候不应该写它，不应该写死,地址应该是一个变量,通过服务名来访问
+    private static final String REST_URL_PREFIX = "http://SPRINGCLOUD-PROVIDER-DEPT";
 
     @RequestMapping("/consumer/dept/get/{id}")
     public Dept getById(@PathVariable(value = "id") Integer id) {
